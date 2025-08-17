@@ -1,0 +1,1 @@
+// Free mode app logic
