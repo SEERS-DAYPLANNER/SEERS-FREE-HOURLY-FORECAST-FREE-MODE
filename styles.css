@@ -1,1 +1,32 @@
-body { font-family: Arial, sans-serif; }
+:root{--ink:#222;--paper:#f7f7f9;--brand:#4B0082;--gold:#FFD700;--line:#e6e6ee}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+.header{background:#222;color:#fff}
+.header-row{display:flex;gap:12px;align-items:center;padding:18px 0}
+.logo{width:44px;height:44px;object-fit:contain}
+h1{margin:0;font-size:22px;letter-spacing:.3px}
+.tag{color:var(--gold);font-weight:700;margin-top:4px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;text-decoration:none;color:inherit;display:inline-block}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0}
+.small{font-size:13px;color:#555}
+.status{font-size:13px;color:#666;margin:-6px 0 10px}
+.blocks{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:10px}
+.block{border:1px solid var(--line);border-radius:10px;padding:10px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.time{font-family:ui-monospace, SFMono-Regular, Menlo, monospace;font-weight:700}
+.leg{display:flex;align-items:center;gap:10px}
+.emoji{font-size:22px}
+.btn{background:var(--brand);color:#fff;border:none;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer}
+.btn:hover{opacity:.9}
+.footer{font-size:12px;color:#666;text-align:center;padding:18px 12px}
+@media(min-width:640px){.blocks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* VOC page */
+.yearbar{display:flex;flex-wrap:wrap;gap:6px}
+.yearbar .badge{min-width:64px;text-align:center}
+.filterrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.search{flex:1;min-width:180px;padding:6px 10px;border:1px solid var(--line);border-radius:8px}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}
+.table th{background:#fafafa;position:sticky;top:0}

@@ -1,1 +1,67 @@
-<!DOCTYPE html><html><head><title>SEERS' HOURLY FORECAST</title></head><body><h1>SEERS' HOURLY FORECAST</h1><p>Free Mode with VOC link</p><a href='voc.html'>View Moon VOC Calendar</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>SEERS' HOURLY FORECAST (Free)</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-row">
+      <img src="seers-logo.png" alt="SEERS logo" class="logo" />
+      <div class="title-block">
+        <h1>SEERS' HOURLY FORECAST</h1>
+        <div class="tag">Know the outcome before it happens…</div>
+      </div>
+      <nav class="nav">
+        <a href="voc.html" class="badge">🌙 VOC</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2 id="today-title">Today</h2>
+      <div id="status" class="status">Local time: — · Next change in —</div>
+      <div id="blocks" class="blocks"></div>
+    </section>
+
+    <section class="cta card">
+      <p>Want the full 7-day forecast?</p>
+      <button id="upgradeBtn" class="btn">Unlock 7‑Day View</button>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary><strong>How it works</strong></summary>
+        <ol>
+          <li>Write one task in the applicable time block.</li>
+          <li>Engage your task at the scheduled time.</li>
+          <li>Focus your attention on your task.</li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Legend</strong></summary>
+        <div id="legend"></div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 SEERS' HOURLY FORECAST · All Rights Reserved</div>
+    <div>Disclaimer: SEERS' HOURLY FORECAST is for entertainment purposes only.</div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
